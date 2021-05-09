@@ -1,3 +1,17 @@
 module.exports = [
-    { id: 1, firstName: "Itamar", lastName: "Gronich" }
+    { id: 1, firstName: "Einat", lastName: "Miller Joan", email: 'a@a.com', 'dogId': 1 },
+    { id: 2, firstName: "Chen", lastName: "Bahiri", email: 'a@a.com', 'dogId': 2 },
+    { id: 3, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 3 },
+    { id: 4, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 4 },
+    { id: 5, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 5 },
+    { id: 6, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 6 },
+    { id: 7, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 7 },
+    { id: 8, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 8 },
+    { id: 9, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 9 },
+    { id: 10, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 10 },
+    { id: 11, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 11 },
+    { id: 12, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 12 },
+    { id: 13, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 13 },
+    { id: 14, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 14 },
+    { id: 15, firstName: "Itamar", lastName: "Gronich", email: 'a@a.com', 'dogId': 15 },
 ]

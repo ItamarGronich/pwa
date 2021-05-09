@@ -1,7 +1,11 @@
 <template>
   <div class="about">
-    <h1>This is a Test page</h1>
-    {{ test }}
+    <div>
+      <input type="number" v-model="ownerId" />
+    </div>
+    <img :src="dogInfo.img" />
+    <p>{{ dogInfo.name }}</p>
+    <p>{{ ownerInfo.firstName }} {{ ownerInfo.lastName }} ({{ ownerInfo.email }})</p>
   </div>
 </template>
 
@@ -9,18 +13,54 @@
 export default ({
   data() {
     return {
-      test: 'jhel',
+      ownerId: null,
+      ownerInfo: {},
+      dogInfo: {},
     };
   },
-  mounted() {
-    this.fetchMe();
+  watch: {
+    ownerId() {
+      this.fetchDog();
+      this.fetchOwner();
+    },
   },
+  // mounted() {
+  //   this.fetchMe();
+  // },
   methods: {
-    fetchMe() {
-      fetch('/api/dog/1')
+    clear() {
+      this.ownerInfo = {};
+      this.dogInfo = {};
+    },
+    fetchDog() {
+      if (!this.ownerId) {
+        this.clear();
+        return;
+      }
+      fetch(`/api/dog/${this.ownerId}`)
         .then((response) => response.json())
         .then((data) => {
-          this.test = data;
+          this.dogInfo = data;
+          this.dogInfo.img = `/api/images/dogs/${data.name}.jpg`;
+        })
+        .catch((error) => {
+          console.error(error);
+          this.clear();
+        });
+    },
+    fetchOwner() {
+      if (!this.ownerId) {
+        this.clear();
+        return;
+      }
+      fetch(`/api/owner/${this.ownerId}`)
+        .then((response) => response.json())
+        .then((data) => {
+          this.ownerInfo = data;
+        })
+        .catch((error) => {
+          console.error(error);
+          this.clear();
         });
     },
   },

@@ -1,6 +1,6 @@
 module.exports = {
   devServer: {
-    proxy: 'http://localhost:5000'
+    proxy: 'http://localhost:5000',
   },
   pwa: {
     name: 'fundog',
@@ -22,5 +22,5 @@ module.exports = {
     // manifestOptions: {},
     // manifestCrossorigin: undefined,
     // iconPaths: {},
-  }
-}
+  },
+};
