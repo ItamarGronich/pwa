@@ -14,6 +14,6 @@ module.exports = [
     { id: 13, firstName: "Artyom", lastName: "Tochilovsky", email: 'a@a.com', 'dogId': 13 },
     { id: 14, firstName: "Nadav", lastName: "Yaron", email: 'a@a.com', 'dogId': 14 },
     { id: 15, firstName: "Lena", lastName: "Oks", email: 'a@a.com', 'dogId': 15 },
-    { id: 16, firstName: "Lena", lastName: "Oks", email: 'a@a.com', 'dogId': 16 },
+    { id: 16, firstName: "Atar", lastName: "Yihia", email: 'a@a.com', 'dogId': 16 },
     { id: 17, firstName: "Elad", lastName: "Cohen", email: 'a@a.com', 'dogId': 17 },
 ]
