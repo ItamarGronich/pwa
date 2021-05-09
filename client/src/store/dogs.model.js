@@ -15,4 +15,20 @@ export default class Dog extends Model {
       friendliness: this.number(0).nullable(),
     };
   }
+
+  static addDogs(dogs) {
+    return this.insert({ data: dogs });
+  }
+
+  static createNewDogTable(dogs) {
+    return this.create({ data: dogs });
+  }
+
+  static getDogById(id) {
+    return this.query().find(id);
+  }
+
+  static getAllDogs() {
+    return this.query().all();
+  }
 }

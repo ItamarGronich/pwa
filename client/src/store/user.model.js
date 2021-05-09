@@ -2,16 +2,31 @@ import { Model } from '@vuex-orm/core';
 import Dog from './dogs.model';
 
 export default class User extends Model {
-  static entity = 'dogs'
+  static entity = 'user'
 
-  static fields() {
+  static state() {
     return {
-      id: this.attr(null),
-      firstName: this.attr('').nullable(),
-      lastName: this.attr('').nullable(),
-      email: this.attr('').nullable(),
-      dogId: this.attr(null).nullable(),
-      dog: this.belongsTo(Dog, 'dogId'),
+      firstName: '',
+      lastName: '',
+      email: '',
+      dogId: null,
     };
+  }
+
+  static set(user) {
+    return User.commit((currentUser) => Object.assign(currentUser, user));
+  }
+
+  static get() {
+    return User.store().state.entities[User.entity];
+  }
+
+  static async getUsersDog() {
+    const { dogId } = this.get();
+    if (dogId) {
+      return Dog.query().find(dogId);
+    }
+
+    return null;
   }
 }
