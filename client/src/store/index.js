@@ -2,11 +2,11 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import VuexORM from '@vuex-orm/core';
 import DogModel from './dogs.model';
-import OwnerModel from './owners.model';
+import UserModel from './user.model';
 
 const models = [
   DogModel,
-  OwnerModel,
+  UserModel,
 ];
 
 Vue.use(Vuex);
@@ -25,3 +25,28 @@ export default new Vuex.Store({
   modules: {
   },
 });
+
+DogModel.insert({
+  data: [
+    {
+      name: 'keppi', img: 'fooo.png', type: 'fooo', owner: 'yossi', food: 'fooo',
+    },
+    {
+      name: 'keppi', img: 'fooo.png', type: 'fooo', owner: 'yossi', food: 'fooo',
+    },
+    {
+      name: 'keppi', img: 'fooo.png', type: 'fooo', owner: 'yossi', food: 'fooo',
+    },
+    {
+      name: 'keppi', img: 'fooo.png', type: 'fooo', owner: 'yossi', food: 'fooo',
+    },
+    {
+      name: 'keppi', img: 'fooo.png', type: 'fooo', owner: 'yossi', food: 'fooo',
+    },
+    {
+      name: 'keppi', img: 'fooo.png', type: 'fooo', owner: 'yossi', food: 'fooo',
+    },
+  ],
+});
+const dogs = DogModel.query().all();
+console.log(dogs);

@@ -1,5 +1,5 @@
 import { Model } from '@vuex-orm/core';
-import Owner from './owners.model';
+import Dog from './dogs.model';
 
 export default class User extends Model {
   static entity = 'dogs'
@@ -7,8 +7,11 @@ export default class User extends Model {
   static fields() {
     return {
       id: this.attr(null),
-      ownerId: this.attr(null),
-      owner: this.belongsTo(Owner, 'ownerId'),
+      firstName: this.attr('').nullable(),
+      lastName: this.attr('').nullable(),
+      email: this.attr('').nullable(),
+      dogId: this.attr(null).nullable(),
+      dog: this.belongsTo(Dog, 'dogId'),
     };
   }
 }

@@ -6,7 +6,13 @@ export default class Dog extends Model {
   static fields() {
     return {
       id: this.attr(null),
-      name: this.attr(''),
+      name: this.string(''),
+      img: this.string('').nullable(),
+      type: this.string('').nullable(),
+      owner: this.string('').nullable(),
+      food: this.string('').nullable(),
+      allergies: this.string('').nullable(),
+      friendliness: this.number(0).nullable(),
     };
   }
 }
