@@ -1,5 +1,5 @@
 #Setup
 
 ```
-./setup-porject.sh
+./setup-project.sh
 ```
