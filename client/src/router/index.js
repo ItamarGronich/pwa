@@ -2,12 +2,14 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import AboutRoute from '../views/about';
 import HomeRoute from '../views/home';
+import TestRoute from '../views/test';
 
 Vue.use(VueRouter);
 
 const routes = [
   AboutRoute,
   HomeRoute,
+  TestRoute,
 ];
 
 const router = new VueRouter({
