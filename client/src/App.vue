@@ -27,14 +27,18 @@ export default {
   height: 100%;
 }
 
+.app-header {
+  flex: 0 50px;
+}
+
 .app-content {
-  flex-shrink: 1;
+  flex: 1;
   overflow: auto;
   background: white;
 }
 
-.navbar-bar {
-  flex-shrink: 0;
+.nav-bar {
+  flex: 0 50px;
 }
 </style>
 

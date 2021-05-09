@@ -19,7 +19,6 @@ export default {
   background: $primary;
   display: flex;
   color: white;
-  height: 50px;
 }
 
 .navbar-item {
