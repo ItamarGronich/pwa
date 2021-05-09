@@ -8,17 +8,17 @@ const fakeDogDb = [
 ]
 
 const ownersDb = [
-    
+
 ]
 
 
 app.get('/api/dog/:id', (req, res) => {
-    const dogId = req.params.id
-    const dog = fakeDogDb[dogId]
+    const dogId = parseInt(req.params.id)
+    const dog = fakeDogDb.find((dog) => dog.id === dogId)
     if (dog) {
         res.send(dog)
     } else {
-        res.status(404).send('Sorry, we cannot find that!')
+        res.status(404).send(`Sorry, we cannot find that dog id ${dogId}`)
     }
 })
 
