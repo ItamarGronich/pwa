@@ -12,7 +12,7 @@ export default class Dog extends Model {
       owner: this.string('').nullable(),
       food: this.string('').nullable(),
       allergies: this.string('').nullable(),
-      friendliness: this.number(0).nullable(),
+      description: this.number(0).nullable(),
     };
   }
 
