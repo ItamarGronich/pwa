@@ -20,7 +20,8 @@
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
-import Dog from '../../store/dogs.model';
+import { fetchAllDogs } from '@/api';
+import Dog from '@/store/dogs.model';
 
 export default {
   name: 'DogCarousel',
@@ -37,14 +38,18 @@ export default {
         useTransform: true,
         rows: 1,
       },
+      dogsData: [1],
     };
   },
-  computed: {
-    dogsData() {
-      return Dog.getAllDogs();
-    },
+  mounted() {
+    this.getDogs();
   },
   methods: {
+    async getDogs() {
+      const dogs = await fetchAllDogs();
+      await Dog.addDogs(dogs);
+      this.dogsData = Dog.getAllDogs();
+    },
     openCard(dog) {
       this.$router.push({
         name: 'Profile',

@@ -9,15 +9,9 @@
 <script>
 import NavBar from './components/NavBar.vue';
 import AppHeader from './components/AppHeader.vue';
-import Dog from './store/dogs.model';
-import { fetchAllDogs } from './api';
 
 export default {
   components: { NavBar, AppHeader },
-  async created() {
-    const dogs = await fetchAllDogs();
-    await Dog.addDogs(dogs);
-  },
 };
 </script>
 

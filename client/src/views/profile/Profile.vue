@@ -4,7 +4,7 @@
     <p>{{ dog.name }}</p>
     <p><span>Type</span>{{ dog.type }}</p>
     <p><span>Owner</span>{{ dog.owner }}</p>
-    <p><span>Allergies</span>{{ dog.allergies }}</p>
+    <p><span>Allergies</span>{{ dog.allergies || 'None' }}</p>
     <p><span>Description</span>{{ dog.description }}</p>
   </div>
 </template>
@@ -35,6 +35,6 @@ export default ({
   }
   .profile {
     text-align: left;
-    padding: 0 20px;
+    padding: 20px 20px 0 20px;
   }
 </style>
