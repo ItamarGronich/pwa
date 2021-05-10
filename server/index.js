@@ -6,6 +6,11 @@ const app = express()
 const port = process.env.PORT || 5000
 
 
+app.get('/', (req, res) => {
+    res.send("hello world")
+})
+
+
 app.get('/api/dog/:id', (req, res) => {
     const dogId = parseInt(req.params.id)
     const dog = dogsDB.find((dog) => dog.id === dogId)
