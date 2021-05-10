@@ -47,7 +47,7 @@ const fetchData = (event) => {
 }
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.url.indexOf('/images') || event.request.url.indexOf('/img')) {
+  if (event.request.url.indexOf('/images') > -1 || event.request.url.indexOf('/img') > -1) {
     return caches.match(event.request)
       .then(res => res)
       .catch(fetchData);
