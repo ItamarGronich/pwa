@@ -5,9 +5,9 @@ module.exports = {
   pwa: {
     name: 'fundog',
     themeColor: '#4DBA87',
-    msTileColor: '#000000',
+    msTileColor: '#FFFFFF',
     appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: 'black',
+    //appleMobileWebAppStatusBarStyle: 'black',
 
     // configure the workbox plugin
     workboxPluginMode: 'InjectManifest',
