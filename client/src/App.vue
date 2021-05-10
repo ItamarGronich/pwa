@@ -2,16 +2,63 @@
   <div id="app">
     <app-header class="app-header" />
     <router-view class="app-content"/>
-    <nav-bar class="nav-bar" />
+    <nav-bar class="nav-bar" @showSidebar="showSidebar" />
+    <div class="hidden">
+      <vs-sidebar
+        absolute
+        :open.sync="sidebarVisible"
+        >
+        <vs-sidebar-item id="home">
+          <template #icon>
+            <img src="/img/icons/settings.png" style="width:25px;height:25px;">
+          </template>
+          Home
+        </vs-sidebar-item>
+        <vs-sidebar-item id="market">
+          <template #icon>
+            <img src="/img/icons/adopt.png" style="width:25px;height:25px;">
+          </template>
+          Adopt a dog
+        </vs-sidebar-item>
+        <vs-sidebar-item id="Music">
+          <template #icon>
+            <img src="/img/icons/music.png" style="width:25px;height:25px;">
+          </template>
+          Dog music
+        </vs-sidebar-item>
+        <vs-sidebar-item id="donate">
+          <template #icon>
+            <img src="/img/icons/donate.jpg" style="width:25px;height:25px;">
+          </template>
+          Donate
+        </vs-sidebar-item>
+        <vs-sidebar-item id="chat">
+          <template #icon>
+            <img src="/img/icons/chat.png" style="width:25px;height:25px;">
+          </template>
+          Chat
+        </vs-sidebar-item>
+      </vs-sidebar>
+    </div>
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue';
 import AppHeader from './components/AppHeader.vue';
-
+// import { ad } from '@fortawesome/fontawesome-free'
 export default {
   components: { NavBar, AppHeader },
+  data() {
+    return {
+      sidebarVisible: false,
+    };
+  },
+  methods: {
+    showSidebar() {
+      this.sidebarVisible = !this.sidebarVisible;
+    },
+  },
 };
 </script>
 
