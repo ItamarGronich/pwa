@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <dog-carousel></dog-carousel>
+    <div class="home-item">
+      <div class="home-item-header">The dogs of Fundbox</div>
+      <dog-carousel></dog-carousel>
+    </div>
+    <div class="home-item">
+      <div class="home-item-header">Slack feed</div>
+    </div>
   </div>
 </template>
 
@@ -18,3 +24,21 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+
+.home-item {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.home-item-header {
+  font-size: 16px;
+  font-weight: 800;
+  align-self: start;
+  padding-left: 20px;
+  padding-bottom: 15px;
+}
+
+</style>
