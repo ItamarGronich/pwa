@@ -8,7 +8,7 @@
       :dog="dog"
       :key="i"
       class="carousel-item"
-      @click="openCard"
+      @click="openCard(dog)"
     >
       <img class="dog-item" src="../../assets/logo.png" alt="">
     </div>
@@ -79,8 +79,13 @@ export default {
     },
   },
   methods: {
-    openCard() {
-      console.log('open card');
+    openCard(dog) {
+      this.$router.push({
+        name: 'Profile',
+        params: {
+          dog,
+        },
+      });
     },
   },
 };

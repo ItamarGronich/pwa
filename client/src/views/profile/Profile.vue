@@ -1,64 +1,19 @@
 <template>
-  <div class="about">
-    <div>
-      <input type="number" v-model="ownerId" />
-    </div>
-    <img :src="dogInfo.img" />
-    <p>{{ dogInfo.name }}</p>
-    <p>{{ ownerInfo.firstName }} {{ ownerInfo.lastName }} ({{ ownerInfo.email }})</p>
+  <div class="profile">
+    <!-- <img :src="dog.img" /> -->
+    <p>{{ dog.name }}</p>
+    <p>{{ dog.owner }}</p>
   </div>
 </template>
 
 <script>
+// import Dog from '@/store/dogs.model';
+
 export default ({
-  data() {
-    return {
-      ownerId: null,
-      ownerInfo: {},
-      dogInfo: {},
-    };
-  },
-  watch: {
-    ownerId() {
-      this.fetchDog();
-      this.fetchOwner();
-    },
-  },
-  methods: {
-    clear() {
-      this.ownerInfo = {};
-      this.dogInfo = {};
-    },
-    fetchDog() {
-      if (!this.ownerId) {
-        this.clear();
-        return;
-      }
-      fetch(`/api/dog/${this.ownerId}`)
-        .then((response) => response.json())
-        .then((data) => {
-          this.dogInfo = data;
-          this.dogInfo.img = `/api/images/dogs/${data.name}.jpg`;
-        })
-        .catch((error) => {
-          console.error(error);
-          this.clear();
-        });
-    },
-    fetchOwner() {
-      if (!this.ownerId) {
-        this.clear();
-        return;
-      }
-      fetch(`/api/owner/${this.ownerId}`)
-        .then((response) => response.json())
-        .then((data) => {
-          this.ownerInfo = data;
-        })
-        .catch((error) => {
-          console.error(error);
-          this.clear();
-        });
+  props: {
+    dog: {
+      type: Object,
+      required: true,
     },
   },
 });
