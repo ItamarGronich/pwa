@@ -10,8 +10,9 @@
       :key="i"
       class="carousel-item"
       @click="openCard(dog)"
+
     >
-      <img class="dog-item" :src="dog.imgSrc" alt="">
+      <div class="dog-item" :style="{ background: dogBackgroundImg(dog) }" />
     </div>
 
   </VueSlickCarousel>
@@ -47,6 +48,9 @@ export default {
     this.getDogs();
   },
   methods: {
+    dogBackgroundImg(dog) {
+      return `center / cover no-repeat url("${dog.imgSrc}")`;
+    },
     async getDogs() {
       const dogs = await fetchAllDogs();
       await Dog.addDogs(dogs);
@@ -79,9 +83,8 @@ export default {
 
   .dog-item {
     border-radius: 15%;
-    height: 150px;
-    width: 150px;
-    margin: 0 30px;
+    height: 110px;
+    width: 110px;
   }
 
 </style>
