@@ -28,7 +28,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-self.addEventListener('fetch', (event) => {
+const fetchData = (event) => {
   event.respondWith(
     fetch(event.request)
       .then(res => {
@@ -44,4 +44,12 @@ self.addEventListener('fetch', (event) => {
       .catch((err => caches.match(event.request))
         .then(res => res))
   );
+}
+
+self.addEventListener('fetch', (event) => {
+  if (event.request.url.indexOf('/images') || event.request.url.indexOf('/img')) {
+    return caches.match(event.request)
+      .then(res => res)
+      .catch(fetchData);
+  }
 });
