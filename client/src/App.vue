@@ -34,7 +34,7 @@ export default {
 }
 
 .app-header {
-  flex: 0 140px;
+  flex: 0 70px;
 }
 
 .app-content {
