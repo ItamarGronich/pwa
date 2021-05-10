@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/api/dog/:id', (req, res) => {
+app.get('/api/dog/:id?', (req, res) => {
     const dogId = parseInt(req.params.id)
     if (dogId) {
         const dog = dogsDB.find((dog) => dog.id === dogId)
