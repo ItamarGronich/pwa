@@ -7,6 +7,7 @@
       <!-- <p><span>Type</span>{{ dog.type }}</p> -->
       <p><span>Owner</span>{{ dog.owner }}</p>
       <p><span>Allergies</span>{{ dog.allergies || 'None' }}</p>
+      <p><span>Food</span>{{ dog.food || 'None' }}</p>
       <p><span>Description</span>{{ dog.description }}</p>
     </div>
   </div>
