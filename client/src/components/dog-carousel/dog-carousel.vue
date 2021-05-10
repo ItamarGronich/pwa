@@ -21,11 +21,10 @@ import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 import Dog from '../../store/dogs.model';
-import DogCard from '../dog-card/dog-card.vue';
 
 export default {
   name: 'DogCarousel',
-  components: { VueSlickCarousel, DogCard },
+  components: { VueSlickCarousel },
   data() {
     return {
       settings: {
