@@ -1,6 +1,6 @@
 module.exports = [
     { id: 1, name: 'Bela', owner: 'Einat Miller Joan', imgSrc:'/images/dogs/bela.jpg', food: 'pro plan', allergies: '', description: 'A really cute dog' },
-    { id: 2, name: 'Chips', owner: 'Chen Bahiri', imgSrc:'/images/dogs/chips.jpg', food: 'pro plan', alergies: '', description: 'very ' },
+    { id: 2, name: 'Chips', owner: 'Chen Bahiri', imgSrc:'/images/dogs/chips.jpg', food: 'pro plan', alergies: '', description: 'very sweet, loves to jump' },
     { id: 3, name: 'Effy', owner: 'Tal Turgeman', imgSrc:'/images/dogs/Effy.jpg', food: 'pro plan', alergies: '', description: 'small, vibrant and hungry' },
     { id: 4, name: 'Gever', owner: 'Hagar Shtroitman', imgSrc:'/images/dogs/gever.jpg', food: 'pro plan', alergies: '', description: 'very masculine' },
     { id: 5, name: 'Jessa', owner: 'Dana Richker', imgSrc:'/images/dogs/jessa.JPG', food: 'pro plan', alergies: '', description: 'always on guard but so gentle' },

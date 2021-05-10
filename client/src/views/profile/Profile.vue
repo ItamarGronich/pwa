@@ -1,11 +1,14 @@
 <template>
   <div class="profile">
-    <div class="img-container" :style="{ 'background': getBackgroundImage(dog) }"/>
-    <p>{{ dog.name }}</p>
-    <p><span>Type</span>{{ dog.type }}</p>
-    <p><span>Owner</span>{{ dog.owner }}</p>
-    <p><span>Allergies</span>{{ dog.allergies || 'None' }}</p>
-    <p><span>Description</span>{{ dog.description }}</p>
+    <div style="margin-left:20px;margin-top:10px;" @click="goHome">&lt; Back</div>
+    <div class="contents">
+      <div class="img-container" :style="{ 'background': getBackgroundImage(dog) }"/>
+      <p class="dogName">{{ dog.name }}</p>
+      <!-- <p><span>Type</span>{{ dog.type }}</p> -->
+      <p><span>Owner</span>{{ dog.owner }}</p>
+      <p><span>Allergies</span>{{ dog.allergies || 'None' }}</p>
+      <p><span>Description</span>{{ dog.description }}</p>
+    </div>
   </div>
 </template>
 
@@ -20,6 +23,9 @@ export default {
   methods: {
     getBackgroundImage(dog) {
       return `center /contain no-repeat url("${dog.imgSrc}")`;
+    },
+    goHome() {
+      this.$router.push('/');
     },
   },
 };
@@ -38,6 +44,13 @@ export default {
   }
   .profile {
     text-align: left;
-    padding: 20px 20px 0 20px;
+  }
+  .contents{
+    padding: 10px 20px 0 20px;
+  }
+  .dogName {
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 10px;
   }
 </style>
