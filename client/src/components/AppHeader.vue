@@ -36,6 +36,6 @@ export default {
 }
 
 .search {
-  padding: 10px 10px 10px 0;
+  padding: 15px;
 }
 </style>
