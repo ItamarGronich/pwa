@@ -1,5 +1,6 @@
 const dogsDB = require("./dbs/dogs.db.js")
-// const ownersDB = require("./dbs/owners.db.js")
+var path = require('path');
+var fs = require('fs');
 
 const express = require('express')
 const app = express()
@@ -14,16 +15,19 @@ app.get('/', (req, res) => {
 
 app.get('/api/dog/:id', (req, res) => {
     const dogId = parseInt(req.params.id)
-    const dog = dogsDB.find((dog) => dog.id === dogId)
-    if (dog) {
-        res.send(dog)
+    if (dogId) {
+        const dog = dogsDB.find((dog) => dog.id === dogId)
+        if (dog) {
+            res.send(dog)
+        } else {
+            res.status(404).send(`Sorry, we cannot find that dog id ${dogId}`)
+        }
     } else {
-        res.status(404).send(`Sorry, we cannot find that dog id ${dogId}`)
+        res.send(dogsDB)
     }
 })
 
-var path = require('path');
-var fs = require('fs');
+
 var dir = path.join(__dirname, 'public');
 
 
