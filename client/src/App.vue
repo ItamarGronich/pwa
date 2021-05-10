@@ -1,39 +1,54 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <app-header class="app-header" />
+    <router-view class="app-content"/>
+    <nav-bar class="nav-bar" />
   </div>
 </template>
 
 <script>
+import NavBar from './components/NavBar.vue';
+import AppHeader from './components/AppHeader.vue';
 
 export default {
-  components: {},
+  components: { NavBar, AppHeader },
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-#nav {
-  padding: 30px;
+.app-header {
+  flex: 0 70px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.app-content {
+  flex: 1;
+  overflow: auto;
+  background: white;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.nav-bar {
+  flex: 0 80px;
+}
+</style>
+
+<style lang="scss">
+@import "styles/color-palette.scss";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: $primary;
 }
 </style>

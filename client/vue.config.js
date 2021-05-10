@@ -1,4 +1,7 @@
 module.exports = {
+  devServer: {
+    proxy: 'http://localhost:5000',
+  },
   pwa: {
     name: 'fundog',
     themeColor: '#4DBA87',
@@ -13,12 +16,11 @@ module.exports = {
       swSrc: './public/sw.js',
       // ...other Workbox options...
     },
-
     // // Manifest configure
     // assetsVersion: '',
     // manifestPath: 'manifest.json',
     // manifestOptions: {},
     // manifestCrossorigin: undefined,
     // iconPaths: {},
-  }
-}
+  },
+};
