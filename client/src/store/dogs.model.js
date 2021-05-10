@@ -7,10 +7,9 @@ export default class Dog extends Model {
     return {
       id: this.attr(null),
       name: this.string(''),
-      img: this.string('').nullable(),
+      imgSrc: this.string('').nullable(),
       type: this.string('').nullable(),
-      ownerFirstName: this.string('').nullable(),
-      ownerLastName: this.string('').nullable(),
+      owner: this.string('').nullable(),
       food: this.string('').nullable(),
       allergies: this.string('').nullable(),
       description: this.string('').nullable(),
