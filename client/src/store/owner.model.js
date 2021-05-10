@@ -1,8 +1,8 @@
 import { Model } from '@vuex-orm/core';
 import Dog from './dogs.model';
 
-export default class User extends Model {
-  static entity = 'user'
+export default class Owner extends Model {
+  static entity = 'owner'
 
   static state() {
     return {
@@ -13,15 +13,15 @@ export default class User extends Model {
     };
   }
 
-  static set(user) {
-    return User.commit((currentUser) => Object.assign(currentUser, user));
+  static set(owner) {
+    return Owner.commit((currentOwner) => Object.assign(currentOwner, owner));
   }
 
   static get() {
-    return User.store().state.entities[User.entity];
+    return Owner.store().state.entities[Owner.entity];
   }
 
-  static async getUsersDog() {
+  static async getOwnersDog() {
     const { dogId } = this.get();
     if (dogId) {
       return Dog.query().find(dogId);

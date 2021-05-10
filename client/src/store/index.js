@@ -2,11 +2,11 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import VuexORM from '@vuex-orm/core';
 import DogModel from './dogs.model';
-import UserModel from './user.model';
+import OwnerModel from './owner.model';
 
 const models = [
   DogModel,
-  UserModel,
+  OwnerModel,
 ];
 
 Vue.use(Vuex);

@@ -24,9 +24,6 @@ export default ({
       this.fetchOwner();
     },
   },
-  // mounted() {
-  //   this.fetchMe();
-  // },
   methods: {
     clear() {
       this.ownerInfo = {};
