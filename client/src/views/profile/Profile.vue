@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <img :src="dog.imgSrc" />
+    <div class="img-container" :style="{ 'background': getBackgroundImage(dog) }"/>
     <p>{{ dog.name }}</p>
     <p><span>Type</span>{{ dog.type }}</p>
     <p><span>Owner</span>{{ dog.owner }}</p>
@@ -10,21 +10,24 @@
 </template>
 
 <script>
-// import Dog from '@/store/dogs.model';
-
-export default ({
+export default {
   props: {
     dog: {
       type: Object,
       required: true,
     },
   },
-});
+  methods: {
+    getBackgroundImage(dog) {
+      return `center /contain no-repeat url("${dog.imgSrc}")`;
+    },
+  },
+};
 </script>
 
 <style scoped>
-  img {
-    max-width: 100%;
+  .img-container {
+    height: 250px;
   }
   p span {
     font-weight: bold;
