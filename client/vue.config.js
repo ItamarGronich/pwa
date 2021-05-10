@@ -19,7 +19,11 @@ module.exports = {
     // // Manifest configure
     // assetsVersion: '',
     // manifestPath: 'manifest.json',
-    // manifestOptions: {},
+    manifestOptions: {
+      name: 'Fundog',
+      display: 'standalone',
+      short_name: 'fdg'
+    },
     // manifestCrossorigin: undefined,
     // iconPaths: {},
   },
