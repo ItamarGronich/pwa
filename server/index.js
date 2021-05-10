@@ -41,6 +41,6 @@ app.get('/api/image/:name', (req, res) => {
 
 
 
-app.listen(port, '127.0.0.1', () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
