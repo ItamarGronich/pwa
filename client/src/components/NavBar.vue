@@ -1,14 +1,19 @@
 <template>
   <div class="navbar-wrapper">
-    <div class="navbar-item">Foo</div>
-    <div class="navbar-item">Bar</div>
-    <div class="navbar-item">Baz</div>
+    <div class="navbar-item" @click="navigate('/')"><img src="/img/icons/dog-house.svg" /></div>
+    <div class="navbar-item"><img src="/img/icons/placeholder.svg" /></div>
+    <div class="navbar-item"><img src="/img/icons/pawprint.svg" /></div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'NavBar',
+  methods: {
+    navigate(where) {
+      this.$router.push(where);
+    },
+  },
 };
 </script>
 
