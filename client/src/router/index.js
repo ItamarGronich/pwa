@@ -2,14 +2,14 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import AboutRoute from '../views/about';
 import HomeRoute from '../views/home';
-import TestRoute from '../views/test';
+import ProfileRoute from '../views/profile';
 
 Vue.use(VueRouter);
 
 const routes = [
   AboutRoute,
   HomeRoute,
-  TestRoute,
+  ProfileRoute,
 ];
 
 const router = new VueRouter({
