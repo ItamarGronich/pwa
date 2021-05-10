@@ -34,7 +34,7 @@ export default {
 }
 
 .app-header {
-  flex: 0 50px;
+  flex: 0 140px;
 }
 
 .app-content {
@@ -44,7 +44,7 @@ export default {
 }
 
 .nav-bar {
-  flex: 0 50px;
+  flex: 0 80px;
 }
 </style>
 
