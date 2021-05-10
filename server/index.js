@@ -7,10 +7,12 @@ const app = express()
 const port = process.env.PORT || 5000
 
 app.use(express.static("../client/dist"))
+app.use('/images', express.static("images"))
 
 app.get('/', (req, res) => {
     res.send("hello world")
 })
+
 
 
 app.get('/api/dog/:id?', (req, res) => {
