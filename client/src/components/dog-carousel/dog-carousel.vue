@@ -37,6 +37,8 @@ export default {
         slidesToScroll: 1,
         useTransform: true,
         rows: 1,
+        swipe: true,
+        swipeToSlide: true,
       },
       dogsData: [],
     };
