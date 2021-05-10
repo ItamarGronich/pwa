@@ -28,5 +28,6 @@ export default {
 
 .navbar-item {
   flex: 1;
+  padding: 20px;
 }
 </style>
