@@ -1,5 +1,5 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target" : { "namespace": "android_app", "package_name": "com.fundog.app",
-               "sha256_cert_fingerprints": ["51:B0:C5:4D:44:C3:E4:9B:8F:EB:AF:0D:F8:59:2D:98:A5:9B:8E:C6:0A:9B:E8:F8:22:6E:6E:D0:5C:4A:6E:D6"] }
+               "sha256_cert_fingerprints": ["A5:F5:93:90:29:77:EA:46:3A:BC:98:6D:2F:9E:CE:4F:37:DF:22:DC:70:3E:F0:EA:CE:62:2F:86:D5:43:F5:50"] }
 }]
