@@ -1,8 +1,14 @@
 <template>
   <div class="navbar-wrapper">
-    <div class="navbar-item" @click="navigate('/')"><img src="/img/icons/dog-house.svg" /></div>
-    <div class="navbar-item"><img src="/img/icons/placeholder.svg" /></div>
-    <div class="navbar-item"><img src="/img/icons/pawprint.svg" /></div>
+    <div class="navbar-item" @click="navigate('/')">
+      <img src="/img/icons/dog-house.svg" />
+    </div>
+    <div class="navbar-item" @click="navigate('/map')">
+      <img src="/img/icons/placeholder.svg" />
+    </div>
+    <div class="navbar-item">
+      <img src="/img/icons/pawprint.svg" />
+    </div>
   </div>
 </template>
 
