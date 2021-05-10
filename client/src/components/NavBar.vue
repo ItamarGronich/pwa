@@ -6,7 +6,7 @@
     <div class="navbar-item" @click="navigate('/map')">
       <img src="/img/icons/placeholder.svg" />
     </div>
-    <div class="navbar-item">
+    <div class="navbar-item" @click="showSidebar">
       <img src="/img/icons/pawprint.svg" />
     </div>
   </div>
@@ -18,6 +18,9 @@ export default {
   methods: {
     navigate(where) {
       this.$router.push(where);
+    },
+    showSidebar() {
+      this.$emit('showSidebar');
     },
   },
 };
