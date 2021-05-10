@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <app-header class="app-header" />
+    <app-header class="app-header" @showSidebar="showSidebar"  />
     <router-view class="app-content"/>
-    <nav-bar class="nav-bar" @showSidebar="showSidebar" />
+    <nav-bar class="nav-bar"/>
     <div class="hidden">
       <vs-sidebar
         absolute

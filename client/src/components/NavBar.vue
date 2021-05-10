@@ -1,14 +1,12 @@
 <template>
   <div class="navbar-wrapper">
-    <div class="navbar-item" @click="navigate('/')">
+    <div class="navbar-item" :class="{ active: isActive('home') }" @click="navigate('/')">
       <img src="/img/icons/dog-house.svg" />
     </div>
-    <div class="navbar-item" @click="navigate('/map')">
+    <div class="navbar-item" :class="{ active: isActive('map') }" @click="navigate('/map')">
       <img src="/img/icons/placeholder.svg" />
     </div>
-    <div class="navbar-item" @click="showSidebar">
-      <img src="/img/icons/pawprint.svg" />
-    </div>
+
   </div>
 </template>
 
@@ -19,8 +17,13 @@ export default {
     navigate(where) {
       this.$router.push(where);
     },
-    showSidebar() {
-      this.$emit('showSidebar');
+    isActive(path) {
+      const currentRoute = this.$route;
+      if (currentRoute) {
+        return currentRoute.name.toLowerCase() === path;
+      }
+
+      return false;
     },
   },
 };
@@ -38,5 +41,10 @@ export default {
 .navbar-item {
   flex: 1;
   padding: 20px;
+  transition: all 200ms ease-in-out;
+
+  &.active {
+    background: darken($primary, 20%)
+  }
 }
 </style>
