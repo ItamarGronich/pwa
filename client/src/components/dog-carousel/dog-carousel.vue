@@ -1,5 +1,6 @@
 <template>
   <VueSlickCarousel
+    v-if="dogsData.length"
     v-bind="settings"
     class="carousel"
   >
@@ -38,7 +39,7 @@ export default {
         useTransform: true,
         rows: 1,
       },
-      dogsData: [1],
+      dogsData: [],
     };
   },
   mounted() {
