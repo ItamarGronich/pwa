@@ -8,11 +8,11 @@
         absolute
         :open.sync="sidebarVisible"
         >
-        <vs-sidebar-item id="home">
+        <vs-sidebar-item id="settings">
           <template #icon>
             <img src="/img/icons/settings.png" style="width:25px;height:25px;">
           </template>
-          Home
+          Settings
         </vs-sidebar-item>
         <vs-sidebar-item id="market">
           <template #icon>
@@ -97,5 +97,9 @@ html, body {
   margin: 0;
   padding: 0;
   background: $primary;
+}
+
+.vs-sidebar__item {
+  padding-top: 25px !important;
 }
 </style>
