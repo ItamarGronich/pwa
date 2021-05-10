@@ -28,7 +28,7 @@ export default {
 }
 
 .app-header {
-  flex: 0 70px;
+  flex: 0 50px;
 }
 
 .app-content {

@@ -30,7 +30,6 @@ export default {
   data() {
     return {
       settings: {
-        dots: true,
         infinite: true,
         centerMode: true,
         centerPadding: '20px',
@@ -77,9 +76,10 @@ export default {
   }
 
   .dog-item {
-    border-radius: 40%;
+    border-radius: 15%;
     height: 150px;
     width: 150px;
+    margin: 0 30px;
   }
 
 </style>
