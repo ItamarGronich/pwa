@@ -28,12 +28,12 @@ export default {
 .slack-item {
   display: flex;
   align-items: center;
-  padding: 10px
 }
 
 .slack-item-image {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  padding: 0 10px;
 }
 </style>

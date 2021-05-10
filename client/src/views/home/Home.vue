@@ -8,6 +8,13 @@
       <div class="home-item-header">Slack feed</div>
       <slack-thread></slack-thread>
     </div>
+    <div class="home-item">
+      <div class="home-item-header">Dog of the week</div>
+      <div class="dog-of-the-week-wrapper">
+        <img class="dog-of-the-week-image" src="../../../../server/images/dogs/nils.jpg" alt="">
+        <div>Nils has been super fluffy this week</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -37,7 +44,7 @@ export default {
 .home-item {
   display: flex;
   flex-direction: column;
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .home-item-header {
@@ -48,4 +55,16 @@ export default {
   padding-bottom: 15px;
 }
 
+.dog-of-the-week-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px
+}
+
+.dog-of-the-week-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 0 10px;
+}
 </style>
