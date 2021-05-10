@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <dog-carousel></dog-carousel>
+    <dog-carousel class="dog-carousel"></dog-carousel>
   </div>
 </template>
 
@@ -18,3 +18,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.dog-carousel {
+  overflow: hidden;
+}
+</style>
