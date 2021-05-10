@@ -10,7 +10,7 @@
       class="carousel-item"
       @click="openCard(dog)"
     >
-      <img class="dog-item" src="../../assets/logo.png" alt="">
+      <img class="dog-item" :src="dog.imgSrc" alt="">
     </div>
 
   </VueSlickCarousel>
@@ -36,46 +36,12 @@ export default {
         slidesToScroll: 1,
         useTransform: true,
         rows: 1,
-        // variableWidth: true,
       },
     };
   },
   computed: {
     dogsData() {
-      console.log(Dog.getAllDogs());
-      return [
-        {
-          id: 1, name: 'lul', img: 'client/src/assets/logo.png', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-        {
-          id: 1, name: 'lul', img: 'IMG', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-        {
-          id: 1, name: 'lul', img: 'IMG', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-        {
-          id: 1, name: 'lul', img: 'IMG', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-        {
-          id: 1, name: 'lul', img: 'IMG', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-        {
-          id: 1, name: 'lul', img: 'IMG', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-        {
-          id: 1, name: 'lul', img: 'IMG', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-        {
-          id: 1, name: 'lul', img: 'IMG', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-        {
-          id: 1, name: 'lul', img: 'IMG', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-        {
-          id: 1, name: 'lul', img: 'IMG', owner: 'adi', food: 'yumm', allergies: 'peanuts', description: 'lazy dog',
-        },
-      ];
-      // return
+      return Dog.getAllDogs();
     },
   },
   methods: {
@@ -106,6 +72,8 @@ export default {
 
   .dog-item {
     border-radius: 40%;
+    height: 150px;
+    width: 150px;
   }
 
 </style>
