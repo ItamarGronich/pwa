@@ -1,8 +1,11 @@
 <template>
   <div class="profile">
-    <!-- <img :src="dog.img" /> -->
+    <img :src="dog.imgSrc" />
     <p>{{ dog.name }}</p>
-    <p>{{ dog.owner }}</p>
+    <p><span>Type</span>{{ dog.type }}</p>
+    <p><span>Owner</span>{{ dog.owner }}</p>
+    <p><span>Allergies</span>{{ dog.allergies }}</p>
+    <p><span>Description</span>{{ dog.description }}</p>
   </div>
 </template>
 
@@ -18,3 +21,20 @@ export default ({
   },
 });
 </script>
+
+<style scoped>
+  img {
+    max-width: 200px;
+  }
+  p span {
+    font-weight: bold;
+    margin-right: 4px;
+  }
+  p span::after {
+    content: ":";
+  }
+  .profile {
+    text-align: left;
+    padding: 0 20px;
+  }
+</style>
