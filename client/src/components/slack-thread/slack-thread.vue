@@ -22,7 +22,7 @@ export default {
 
 .slack-thread {
   display: flex;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 .slack-item {
