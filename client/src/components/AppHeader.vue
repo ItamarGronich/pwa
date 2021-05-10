@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    header
+    <img src="../assets/logo.png" alt="">
   </div>
 </template>
 
@@ -15,5 +15,8 @@ export default {
 
 .header {
   background: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
